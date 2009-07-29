@@ -1,0 +1,54 @@
+/*******************************
+ * 
+ * Slideshow
+ * 
+ *****************************/
+#slideshow {
+    position:relative;
+	height: 580px;
+}
+#slideshowHomeFrame #slideshow {
+    position:relative;
+	height: 303px;
+	margin: 4px 0 0 8px;
+}
+#slideshow img{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+}
+#slideshow img.active{
+    z-index:10;
+}
+
+#slideshow img.last-active{
+    z-index:9;
+}
+
+
+/**********************************************
+ * 
+ * Photo gallery 
+ * 
+ **********************************************/
+
+img.galleryShow{
+	display: block;
+}
+img.galleryHide{
+	display: none;
+}
+div.galleryFrame{
+	width: 380px;
+	height: 440px;
+	border: 1px solid #e41e25;
+	margin: 0 0 10px 0;
+}
+.galleryItem img{
+	border: 1px solid #e41e25;
+	margin: 0 7px 10px 0;
+}
+a.galleryItem:hover  img, a.currentGalleryItem img{
+	border-color: #fff;
+}

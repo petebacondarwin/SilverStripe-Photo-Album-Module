@@ -1,0 +1,5 @@
+Photo Album Module for SilverStripe CMS
+=============================================
+
+This module provides a simple way of displaying photos in a single page.
+It depends upon the associated_folder module, the dataobject_manager and the swfupload modules.
