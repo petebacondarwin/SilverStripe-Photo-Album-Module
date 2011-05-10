@@ -19,7 +19,6 @@ class PhotoAlbumPage extends Page {
 	);
 	static $has_many = array("Photos" => "PhotoAlbumPage_Photo",);
 	static $default_parent = 'PhotoAlbumHolder';
-	static $allowed_children = array();
 
 	function getCMSFields() {
 		$photoManager = new PhotoAlbumPage_Manager($this, "Photos", "PhotoAlbumPage_Photo", "Photo", array("Caption"=>"Caption"), "getCMSFields_forPopup");
@@ -32,7 +31,7 @@ class PhotoAlbumPage extends Page {
 		$photos = DataObject::get("PhotoAlbumPage_Photo", "PhotoAlbumPageID = ".$this->ID);
 		if ( $photos && $photos->Count() > 0 ) {
 			$coverPhotoField = new DropdownField('CoverImageID','Cover Photo', $photos->toDropdownMap('ID','Caption'));
-			$coverPhotoField->setRightTitle('Choose a photo that will be used in event lists.');
+			$coverPhotoField->setRightTitle('Choose a photo that will be used in holder pages.');
 			$fields->addFieldToTab('Root.Content.Main', $coverPhotoField, 'Content');
 		}
 		return $fields;

@@ -9,8 +9,8 @@
 }
 #slideshowHomeFrame #slideshow {
     position:relative;
-	height: 303px;
-	margin: 4px 0 0 8px;
+	height: 320px;
+	margin: 0px 0 0 0px;
 }
 #slideshow img{
     position:absolute;
